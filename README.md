@@ -1,2 +1,3 @@
 # recipe-share-app
-GA Final Project.  Recipe Sharing App using MERN stack and React Native
+
+[Backend](https://github.com/mdcoxe/dev-notebook/blob/main/Recipe-Sharing-App-Notes.md)
