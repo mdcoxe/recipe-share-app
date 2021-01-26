@@ -75,6 +75,18 @@ route.post('/', auth, async (req, res) => {
 });
 
 //===============================//
+//++++++++++EDIT ROUTE+++++++++++//
+//===============================//
+route.get('/:id/edit', async (req, res) => {
+    try{
+        const editRecipe = await Model.findById(req.params.id);
+        res.status(200).json(editRecipe);
+    } catch (error) {
+        res.status(400).json(error);
+    } 
+});
+
+//===============================//
 //++++++++++SHOW ROUTE+++++++++++//
 //===============================//
 route.get('/:id', async (req, res) => {
