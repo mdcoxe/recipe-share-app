@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const ingredSchema = Schema({
     name: { type: String },
-    qty: { type: Number },
+    qty: { type: String },
     measurement: { type: String }
 });
 
@@ -11,6 +11,7 @@ const recipeSchema = Schema({
     description: { type: String },
     img: { type: String },
     servings: { type: Number },
+    //id of user who created the recipe
     creator: { type: String, required: true },
     prep: { type: Number },
     cook: { type: Number },

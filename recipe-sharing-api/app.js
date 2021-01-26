@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3009;
 const MONGOURI = process.env.MONGODB_URI;
+const SECRET = process.env.SECRET;
 const cors = require('cors');
 
 
@@ -33,7 +34,7 @@ app.use('/recipe', controller);
 //===============================//
 //+++++DATABASE CONNECTION+++++++//
 //===============================//
-
+mongoose.set('useCreateIndex', true);
 mongoose.connect(MONGOURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
