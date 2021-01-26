@@ -6,13 +6,20 @@ const PORT = process.env.PORT || 3009;
 const MONGOURI = process.env.MONGODB_URI;
 const cors = require('cors');
 
+
+//Authentication
+const User = require('./models/user');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+
 //Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencodeded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 //Routes from the controllers directory
 const controller = require('./controllers/controllers');
+app.use('/recipe', controller);
 
 //Database Connection
 mongoose.connect(MONGOURI, {
