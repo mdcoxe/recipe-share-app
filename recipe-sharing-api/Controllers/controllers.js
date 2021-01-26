@@ -3,7 +3,6 @@ const route = express.Router();
 const Model = require('../models/model');
 const jwt = require('jsonwebtoken');
 
-
 const SECRET = 'comeasyouarecomeasyouwereasiwantyoutobeasafriend';
 
 const auth = async (req, res, next) => {
