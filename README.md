@@ -14,9 +14,14 @@
     - Models work, verified in postman
 - ~~Test routes and authorization~~
     - Routes work, verified in Postman
-- Read up on google and facebook authentication
+- ~~Read up on google and facebook authentication~~might pick only one...depends how easily google auth goes
 - ~~Wireframe frontend~~ Did on whiteboard instead
 - ~~Initialize react native frontend~~ React Native front end initialized with ios, android and web running
+
+## Wednesday To Do
+- finish building out initial functionality on frontend
+- connect to backend
+- Start implementing google/facebook auth.
 
 
 
