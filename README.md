@@ -7,7 +7,7 @@
 
 ## Monday Updates 25 Jan
 - Built backend to include authorization/authentication with jwt/bcrypt all routes and models included
-- Built a backend cheatsheet for future use with some basic templates [Backend](https://github.com/mdcoxe/dev-notebook/blob/main/Recipe-Sharing-App-Notes.md)
+- Built a cheatsheet for future use with some basic templates =>> [Cheatsheet](https://github.com/mdcoxe/dev-notebook/blob/main/Recipe-Sharing-App-Notes.md)
 
 ## Tuesday Updates 26 Jan
 - ~~Verify models work~~
@@ -15,8 +15,8 @@
 - ~~Test routes and authorization~~
     - Routes work, verified in Postman
 - Read up on google and facebook authentication
-- Wireframe frontend
-- Initialize react native frontend
+- ~~Wireframe frontend~~ Did on whiteboard instead
+- ~~Initialize react native frontend~~ React Native front end initialized with ios, android and web running
 
 
 
