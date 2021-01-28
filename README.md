@@ -19,7 +19,9 @@
 - ~~Initialize react native frontend~~ React Native front end initialized with ios, android and web running
 
 ## Wednesday To Do
-- finish building out initial functionality on frontend
+- ~~finish building out initial functionality on frontend~~
+- build forms, filler text, logo/icons, make nav bar work
+### Pushed to Thursday
 - connect to backend
 - Start implementing google/facebook auth.
 
@@ -39,3 +41,6 @@
 - Users can sort list of all recipes viewable by user(all public + all private owned by user)
 - Finished product styling
 
+## Color Palette
+ #5D0C1D - Logo Background
+#f2a22c

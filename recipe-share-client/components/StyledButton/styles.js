@@ -11,13 +11,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
+    zIndex: 100,
    },
+   
    text: {
     fontSize: 12,
-    fontWeight: '500',
+    fontWeight: '900',
     textTransform: 'uppercase',
 
    }
+
 });
 
 export default styles;

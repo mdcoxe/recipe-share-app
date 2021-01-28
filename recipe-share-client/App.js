@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import Home from './components/Home';
 import Login from './components/Login';
 import Feed from './components/Feed';
@@ -21,6 +22,10 @@ export default function App() {
       <Stack.Navigator initialRouteName='Scrumptious'>
         <Stack.Screen name='Scrumptious' component={Home} />
         <Stack.Screen name='Feed' component={Feed} />
+        {/* Can possibly use this to build the logged in users favorites feed */}
+        {/* <Stack.Screen name="Home">
+            {props => <HomeScreen {...props} extraData={someData} />}
+        </Stack.Screen> */}
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Register' component={Register} />
         {/* <Stack.Screen name='CreateRecipe' component={CreateRecipe} /> */}
@@ -29,3 +34,12 @@ export default function App() {
     </NavigationContainer>
   )
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
