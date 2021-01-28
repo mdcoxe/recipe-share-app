@@ -25,6 +25,10 @@
 - connect to backend
 - Start implementing google/facebook auth.
 
+## Thursday
+- Finish building recipe create/edit form, add navbar function
+- Connect to backend
+- implement google/facebook auth
 
 ## User Stories
 - All users should be able to create multiple recipes, share/edit/delete specific recipes created by said user
