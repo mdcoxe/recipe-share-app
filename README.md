@@ -6,8 +6,8 @@
 - Learned React native basics through code along tutorial(Built tesla app clone)
 
 ## Monday Updates 25 Jan
-- Built backend to include authorization/authentication with jwt/bcrypt all routes and models included
-- Built a cheatsheet for future use with some basic templates =>> [Cheatsheet](https://github.com/mdcoxe/dev-notebook/blob/main/Recipe-Sharing-App-Notes.md)
+- ~~Build backend~~ included authorization/authentication with jwt/bcrypt all routes and models included
+- ~~Built a cheatsheet for future use~~ incloudes some basic templates =>> [Cheatsheet](https://github.com/mdcoxe/dev-notebook/blob/main/Recipe-Sharing-App-Notes.md)
 
 ## Tuesday Updates 26 Jan
 - ~~Verify models work~~
@@ -19,11 +19,11 @@
 - ~~Initialize react native frontend~~ React Native front end initialized with ios, android and web running
 
 ## Wednesday To Do
-- finish building out initial functionality on frontend
+- ~~finish building out initial functionality on frontend~~
+- build forms, filler text, logo/icons, make nav bar work
+### Pushed to Thursday
 - connect to backend
 - Start implementing google/facebook auth.
-
-
 
 
 ## User Stories
@@ -41,3 +41,6 @@
 - Users can sort list of all recipes viewable by user(all public + all private owned by user)
 - Finished product styling
 
+## Color Palette
+ #5D0C1D - Logo Background
+#f2a22c

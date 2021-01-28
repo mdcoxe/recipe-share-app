@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import styles from './styles';
 
-const CreateRecipe = () => {
+const Feed = () => {
   
    
     return (
@@ -15,4 +15,4 @@ const CreateRecipe = () => {
     )
 }
 
-export default CreateRecipe;
+export default Feed;
