@@ -1,70 +1,104 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { View, Text, TextInput } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, Text,  } from 'react-native';
+import styles from './styles'
+import { Button, TextInput } from 'react-native-paper';
+import RecipeForm from '../RecipeForm';
 import StyledButton from '../StyledButton';
-import styles from './styles';
-
-const prod = 'http://localhost:3010';
-const dev = 'http://localhost:3010';
-const url = (process.env.NODE_ENV ==='development' ? dev : prod)
 
 const CreateRecipe = ({ navigation }) => {
-    const [recipeName, setRecipe] = useState([]);
-    const [value, onChangeText] =useState('testt')
-    const reqTitle = useRef(null);
-    const reqCreator = useRef(null);
-
-    const popRecipeDB = async (event) => {
-      console.log({value})
+    const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [img, setImg] = useState('')
+    const [servings, setServings] = useState('')
+    const [creator, setCreator] = useState('') 
+    const [prep, setPrep] = useState('')
+    const [cook, setCook] = useState('')
+    const [temp, setTemp] = useState('')
+    
+    const submitData = async (event) => {
         const body = JSON.stringify({
-            title: value,
-            // creator: reqCreator.current.value,
+            title: title,
+            description: description,
+            img: img,
+            servings: servings,
+            creator: creator
         })
-        console.log(body)
         try {
             const response = await fetch(
-                `http://127.0.0.1:3010/recipe/`, {
+                `http://127.0.0.1:3010/recipe`, {
                     method: 'POST',
                     headers: {
-                        'Accept': 'application/json',
                         'Content-type': 'application/json'
                     },
                     body
                 })
             const data = await response.json();
-            // setRecipe(data)
             console.log(data)
         } catch (error) {
             console.log(error)
         }
     }
-   
+    
     return (
-        
         <View style={styles.container}>
-             <View style={styles.userForm}>
-            <Text style={styles.text}>Recipe name: </Text>
-            <TextInput
-                style={{ height: 40, width: 300 | '80%', backgroundColor: 'white', borderColor: 'gray', borderWidth: 1 }}
-                onChangeText={text => onChangeText(text)}
-                value={value}
-                // ref={reqTitle}
-            />
-            {/* <Text style={styles.text}>Creator: </Text>
-            <TextInput
-                style={{height: 40, width: 300 | '80%',  backgroundColor: 'white', borderColor: 'gray', borderWidth: 1 }}
-                ref={reqCreator}
-                // onChangeText={text => onChangeText(text)}
-                // value={value}
-                // secureTextEntry={true}
-            /> */}
-            <StyledButton 
-                type="secondary"
-                onPress={popRecipeDB} 
-                content="Create Recipe"   
-            />
-            </View>
+            <TextInput 
+                label='Recipe Name'
+                value={title}
+                mode="outlined"
+                theme={theme}
+                onChangeText={text => setTitle(text)}
+                styles={styles.inputStyle}
+            /> 
+            <TextInput 
+                label='Short Description'
+                value={description}
+                mode="outlined"
+                theme={theme}
+                onChangeText={text => setDescription(text)}
+                styles={styles.inputStyle}
+            /> 
+            <TextInput 
+                label='Image URL'
+                value={img}
+                mode="outlined"
+                theme={theme}
+                onChangeText={text => setImg(text)}
+                styles={styles.inputStyle}
+            /> 
+            <TextInput 
+                label='Number of Servings'
+                value={servings}
+                mode="outlined"
+                theme={theme}
+                keyboardType="number-pad"
+                onChangeText={text => setServings(text)}
+                styles={styles.inputStyle}
+            /> 
+            <TextInput 
+                label='Creator'
+                value={creator}
+                mode="outlined"
+                theme={theme}
+                onChangeText={text => setCreator(text)}
+                styles={styles.inputStyle}
+            /> 
+            <Button 
+                style={styles.inputStyle}
+                icon="content-save"
+                mode='contained'
+                theme={theme}
+                onPress={() => submitData()}
+            >
+                Save Recipe
+            </Button>
         </View>
+     
     )
+}
+const theme = {
+    colors: {
+        primary: '#5D0C1D'
+    }
 }
 
 export default CreateRecipe;
