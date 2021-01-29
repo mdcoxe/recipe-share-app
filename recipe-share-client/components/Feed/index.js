@@ -4,7 +4,7 @@ import styles from './styles'
 import StyledButton from '../StyledButton';
 import RecipeCard from '../RecipeCard';
 
-const Feed = () => {
+const Feed = ({ navigation }) => {
   
    
     return (
@@ -12,7 +12,11 @@ const Feed = () => {
             <Text>Feed  Page</Text>
 
           <RecipeCard />
-
+          <StyledButton 
+                type="primary"
+                onPress={() => {navigation.navigate('CreateRecipe')}}
+                content="Create Recipe"
+                />
         </View>
     )
 }
