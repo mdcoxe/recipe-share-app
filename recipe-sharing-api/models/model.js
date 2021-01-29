@@ -7,12 +7,12 @@ const ingredSchema = Schema({
 });
 
 const recipeSchema = Schema({
-    title: { type: String, required: true },
+    title: { type: String },
     description: { type: String },
     img: { type: String },
     servings: { type: Number },
     //id of user who created the recipe
-    creator: { type: String, required: true },
+    creator: { type: String },
     prep: { type: Number },
     cook: { type: Number },
     temp: { type: Number },
