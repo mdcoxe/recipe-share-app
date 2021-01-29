@@ -2,25 +2,23 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
    container: {
-    width: '100%',
-    padding: 10,
-
+      width: '100%',
+      padding: 10,
    },
    button: {
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 20,
-    zIndex: 100,
+      height: 40,
+      justifyContent: 'center',
+      alignSelf: 'center',
+      width: '75%',
+      borderRadius: 20,
+      zIndex: 100,
    },
-   
    text: {
-    fontSize: 12,
-    fontWeight: '900',
-    textTransform: 'uppercase',
-
+      fontSize: 12,
+      fontWeight: 'bold',
+      textTransform: 'uppercase',
+      textAlign: 'center',
    }
-
 });
 
 export default styles;

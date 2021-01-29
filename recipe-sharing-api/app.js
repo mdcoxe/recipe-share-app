@@ -5,7 +5,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = process.env.PORT || 3009;
+const PORT = process.env.PORT || 3010;
 const MONGOURI = process.env.MONGODB_URI;
 const SECRET = process.env.SECRET;
 const cors = require('cors');

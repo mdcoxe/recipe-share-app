@@ -28,7 +28,7 @@ export default function App() {
         </Stack.Screen> */}
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Register' component={Register} />
-        {/* <Stack.Screen name='CreateRecipe' component={CreateRecipe} /> */}
+        <Stack.Screen name='CreateRecipe' component={CreateRecipe} />
         {/* <Stack.Screen name='EditRecipe' component={EditRecipe} /> */}
       </Stack.Navigator>
     </NavigationContainer>

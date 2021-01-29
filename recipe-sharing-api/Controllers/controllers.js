@@ -35,7 +35,8 @@ route.get('/', async (req, res) => {
 //===============================//
 //+++++++++DELETE ROUTE++++++++++//
 //===============================//
-route.delete('/:id', auth, async (req, res) => {
+route.delete('/:id', async (req, res) => {
+// route.delete('/:id', auth, async (req, res) => {
     try {
         const deleteRecipe = await Model.findByIdAndRemove(req.params.id);
         res.status(200).json(deleteRecipe);
@@ -47,7 +48,8 @@ route.delete('/:id', auth, async (req, res) => {
 //===============================//
 //+++++++++UPDATE ROUTE++++++++++//
 //===============================//
-route.put('/:id', auth, async (req, res) => {
+route.put('/:id',  async (req, res) => {
+// route.put('/:id', auth, async (req, res) => {
     try {
         const updateRecipe = await Model.findByIdAndUpdate(
             req.params.id,
@@ -63,7 +65,8 @@ route.put('/:id', auth, async (req, res) => {
 //===============================//
 //+++++++++CREATE ROUTE++++++++++//
 //===============================//
-route.post('/', auth, async (req, res) => {
+route.post('/',  async (req, res) => {
+// route.post('/', auth, async (req, res) => {
     try {
         const createRecipe = await Model.create(req.body);
         res.status(200).json(createRecipe);
