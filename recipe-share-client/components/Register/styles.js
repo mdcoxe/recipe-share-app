@@ -24,6 +24,8 @@ const styles = StyleSheet.create({
     text: {
         color: '#f2a22c',
         textAlign: 'center',
+        width: '80%',
+        marginTop: 15,
     },
     image: {
         alignSelf: 'center',
@@ -31,12 +33,6 @@ const styles = StyleSheet.create({
         width:  '80%',
         resizeMode: 'center'
     },
-    loginForm: {
-        alignSelf: 'center',
-        marginTop: 15,
-        marginBottom: 15,
-        marginHorizontal: 'auto',
-    }
 })
 
 export default styles;

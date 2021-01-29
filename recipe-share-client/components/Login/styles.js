@@ -31,12 +31,7 @@ const styles = StyleSheet.create({
         width:  '80%',
         resizeMode: 'center'
     },
-    loginForm: {
-        alignSelf: 'center',
-        marginTop: 15,
-        marginBottom: 15,
-        marginHorizontal: 'auto',
-    }
+   
 })
 
 export default styles;

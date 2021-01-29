@@ -1,6 +1,8 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import styles from './styles';
+import * as React from 'react';
+import { Text, View, Button, Image} from 'react-native';
+import styles from './styles'
+import StyledButton from '../StyledButton';
+import RecipeCard from '../RecipeCard';
 
 const Feed = () => {
   
@@ -9,7 +11,7 @@ const Feed = () => {
         <View style={styles.container}>
             <Text>Feed  Page</Text>
 
-          
+          <RecipeCard />
 
         </View>
     )

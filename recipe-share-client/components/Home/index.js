@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+
 import * as React from 'react';
 import { Text, View, Button, Image} from 'react-native';
 import styles from './styles'
@@ -30,7 +30,6 @@ export default function Home({ navigation }) {
                 />
                
           
-            <StatusBar style="auto" />
         </View>
     );
 }
