@@ -5,14 +5,11 @@ import styles from './styles';
 
 const StyledButton = (props) => {
     const { type, content, onPress } = props;
-
     const backgroundColor = type === 'primary' ? 'white' : '#f2a22c';
     const textColor = type === 'primary' ? '#5D0C1D' : 'white';
 
     return (
         <View style={styles.container}>
-           
-
             <Button
                 mode="contained"
                 title={content} 
@@ -21,7 +18,6 @@ const StyledButton = (props) => {
                 >
                 <Text style={[styles.text, {color: textColor}]}> {content}</Text>
             </Button>
-            
         </View>
     )
 };

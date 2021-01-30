@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
         width:  '80%',
         resizeMode: 'center'
     },
- 
 })
 
 export default styles;

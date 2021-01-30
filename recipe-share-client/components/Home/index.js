@@ -1,7 +1,7 @@
 
 import * as React from 'react';
-import { Text, View, Button, Image} from 'react-native';
-import styles from './styles'
+import { Text, View, Image} from 'react-native';
+import styles from './styles';
 import StyledButton from '../StyledButton';
 
 export default function Home({ navigation }) {
@@ -28,9 +28,7 @@ export default function Home({ navigation }) {
                 onPress={() => {navigation.navigate('Register')}}
                 content="Register"
                 />
-               
-          
         </View>
-    );
-}
+    )
+};
 

@@ -21,14 +21,20 @@
 ## Wednesday To Do
 - ~~finish building out initial functionality on frontend~~
 - build forms, filler text, logo/icons, make nav bar work
-### Pushed to Thursday
-- connect to backend
-- Start implementing google/facebook auth.
 
 ## Thursday
-- Finish building recipe create/edit form, add navbar function
-- Connect to backend
-- implement google/facebook auth
+- ~~Finish building recipe create/edit form~~
+- ~~Connect to backend~~ - completed Friday morning due to issues
+
+## Friday
+- Work through issues - backend connection
+- Get styling finished
+
+
+# Things left to accomplish
+- Show Page - link to edit page
+- Edit page built but needs routing - add delete button...only accessable via auth
+- Authentication frontend
 
 ## User Stories
 - All users should be able to create multiple recipes, share/edit/delete specific recipes created by said user
@@ -41,10 +47,13 @@
 - Used new tech - React Native, Google/Facebook Auth API
 - Users can register, login, log out
 - Users can create, edit, and delete
-- Users can favorite/save recipe
-- Users can sort list of all recipes viewable by user(all public + all private owned by user)
+- Users can sort list of all recipes 
 - Finished product styling
 
-## Color Palette
- #5D0C1D - Logo Background
-#f2a22c
+
+## Post MVP
+- Users can favorite/save recipe
+- Users can sort and search feeds
+- Users can view a private feed of user created recipes and liked recipes
+- Build in photo upload functionality (Upload from album or take photo)
+
