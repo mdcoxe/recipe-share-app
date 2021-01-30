@@ -44,14 +44,14 @@
 
 ## MVP
 - Deployed
-- Used new tech - React Native, Google/Facebook Auth API
+- Used new tech - React Native
 - Users can register, login, log out
 - Users can create, edit, and delete
-- Users can sort list of all recipes 
 - Finished product styling
 
 
 ## Post MVP
+- Users can sort list of all recipes 
 - Users can favorite/save recipe
 - Users can sort and search feeds
 - Users can view a private feed of user created recipes and liked recipes
