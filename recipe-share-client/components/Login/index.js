@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ActivityIndicator } from 'react-native';
 import styles from './styles';
 import UserForm from '../UserForm';
-import { StatusBar } from 'expo-status-bar';
 import StyledButton from '../StyledButton';
+
+
 
 
 const Login = ({ navigation }) => {
@@ -31,7 +32,6 @@ const Login = ({ navigation }) => {
                 onPress={() => {navigation.navigate('Register')}}
                 content="Register"
                 />
-            <StatusBar style="auto" />
         </View>
     )
 }
