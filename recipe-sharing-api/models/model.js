@@ -7,7 +7,7 @@ const ingredSchema = Schema({
 });
 
 const recipeSchema = Schema({
-    title: { type: String },
+    title: { type: String, required: true},
     description: { type: String },
     img: { type: String },
     servings: { type: Number },
@@ -17,6 +17,7 @@ const recipeSchema = Schema({
     cook: { type: Number },
     temp: { type: Number },
     ingredients: [ingredSchema],
+    directions: { type: String },
     public: { type: Boolean },
     tags: [{ type: String, lowercase: true }]
 });

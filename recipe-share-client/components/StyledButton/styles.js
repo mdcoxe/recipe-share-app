@@ -10,8 +10,9 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignSelf: 'center',
       width: '75%',
-      borderRadius: 20,
+      // borderRadius: 20,
       zIndex: 100,
+      elevation: 10
    },
    text: {
       fontSize: 12,

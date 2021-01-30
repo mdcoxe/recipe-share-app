@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text,  } from 'react-native';
+import { View } from 'react-native';
 import styles from './styles'
 import { Button, TextInput } from 'react-native-paper';
-import RecipeForm from '../RecipeForm';
-import StyledButton from '../StyledButton';
 
 const CreateRecipe = ({ navigation }) => {
     const [title, setTitle] = useState('')
@@ -14,14 +12,22 @@ const CreateRecipe = ({ navigation }) => {
     const [prep, setPrep] = useState('')
     const [cook, setCook] = useState('')
     const [temp, setTemp] = useState('')
+    const [directions, setDirections] = useState('')
     
+    const escapePage = () => {
+        navigation.navigate('Feed');
+    }
     const submitData = async (event) => {
         const body = JSON.stringify({
             title: title,
             description: description,
             img: img,
             servings: servings,
-            creator: creator
+            creator: creator,
+            prep: prep,
+            cook: cook,
+            temp, temp,
+            directions: directions
         })
         try {
             const response = await fetch(
@@ -34,6 +40,7 @@ const CreateRecipe = ({ navigation }) => {
                 })
             const data = await response.json();
             console.log(data)
+            await escapePage();
         } catch (error) {
             console.log(error)
         }
@@ -58,20 +65,46 @@ const CreateRecipe = ({ navigation }) => {
                 styles={styles.inputStyle}
             /> 
             <TextInput 
-                label='Image URL'
-                value={img}
-                mode="outlined"
-                theme={theme}
-                onChangeText={text => setImg(text)}
-                styles={styles.inputStyle}
-            /> 
-            <TextInput 
                 label='Number of Servings'
                 value={servings}
                 mode="outlined"
                 theme={theme}
                 keyboardType="number-pad"
                 onChangeText={text => setServings(text)}
+                styles={styles.inputStyle}
+            /> 
+            <TextInput 
+                label='Prep Time'
+                value={prep}
+                mode="outlined"
+                theme={theme}
+                onChangeText={text => setPrep(text)}
+                styles={styles.inputStyle}
+            /> 
+            <TextInput 
+                label='Cook Time'
+                value={cook}
+                mode="outlined"
+                theme={theme}
+                onChangeText={text => setCook(text)}
+                styles={styles.inputStyle}
+            /> 
+            <TextInput 
+                label='Cook Temp'
+                value={temp}
+                mode="outlined"
+                theme={theme}
+                onChangeText={text => setTemp(text)}
+                styles={styles.inputStyle}
+            /> 
+              <TextInput 
+                label='Directions'
+                value={directions}
+                mode="outlined"
+                multiline={true}
+                numberOfLines={4}
+                theme={theme}
+                onChangeText={text => setDirections(text)}
                 styles={styles.inputStyle}
             /> 
             <TextInput 
