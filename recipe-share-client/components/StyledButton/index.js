@@ -1,25 +1,27 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Pressable } from 'react-native';
+import { View, Text } from 'react-native';
+import { Button } from 'react-native-paper';
 import styles from './styles';
 
 const StyledButton = (props) => {
     const { type, content, onPress } = props;
 
     const backgroundColor = type === 'primary' ? 'white' : '#f2a22c';
-    const textColor = type === 'primary' ? 'black' : 'white';
+    const textColor = type === 'primary' ? '#5D0C1D' : 'white';
 
     return (
         <View style={styles.container}>
-            {/* <TouchableOpacity style={styles.buttonxx}> */}
+           
 
-            <Pressable
+            <Button
+                mode="contained"
                 title={content} 
                 style={[styles.button, {backgroundColor: backgroundColor}]}
                 onPress={() => { onPress()}}
                 >
                 <Text style={[styles.text, {color: textColor}]}> {content}</Text>
-            </Pressable>
-            {/* </TouchableOpacity> */}
+            </Button>
+            
         </View>
     )
 };

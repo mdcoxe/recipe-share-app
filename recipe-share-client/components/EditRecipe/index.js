@@ -12,29 +12,29 @@ const EditRecipe = () => {
     const [cook, setCook] = useState('')
     const [temp, setTemp] = useState('')
     
-    const submitData = async (event) => {
-        const body = JSON.stringify({
-            title: title,
-            description: description,
-            img: img,
-            servings: servings,
-            creator: creator
-        })
-        try {
-            const response = await fetch(
-                `http://127.0.0.1:3010/recipe/${id}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-type': 'application/json'
-                    },
-                    body
-                })
-            const data = await response.json();
-            console.log(data)
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    // const submitData = async (event) => {
+    //     const body = JSON.stringify({
+    //         title: title,
+    //         description: description,
+    //         img: img,
+    //         servings: servings,
+    //         creator: creator
+    //     })
+    //     try {
+    //         const response = await fetch(
+    //             `http://127.0.0.1:3010/recipe/${id}`, {
+    //                 method: 'PUT',
+    //                 headers: {
+    //                     'Content-type': 'application/json'
+    //                 },
+    //                 body
+    //             })
+    //         const data = await response.json();
+    //         console.log(data)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
     
   
    

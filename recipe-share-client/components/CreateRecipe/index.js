@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text,  } from 'react-native';
+import { View } from 'react-native';
 import styles from './styles'
 import { Button, TextInput } from 'react-native-paper';
-import RecipeForm from '../RecipeForm';
+
 import StyledButton from '../StyledButton';
 
 const CreateRecipe = ({ navigation }) => {
@@ -34,6 +34,7 @@ const CreateRecipe = ({ navigation }) => {
                 })
             const data = await response.json();
             console.log(data)
+            
         } catch (error) {
             console.log(error)
         }

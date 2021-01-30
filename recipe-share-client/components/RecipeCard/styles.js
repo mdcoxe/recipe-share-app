@@ -7,6 +7,15 @@ const styles = StyleSheet.create ({
         width:  '80%',
         resizeMode: 'center'
     },  
+    card:{
+        alignSelf: 'center',
+        marginVertical: 5,
+        width: '95%',
+        elevation: 10,
+    },
+    content: {
+        
+    }
 });
 
 export default styles;

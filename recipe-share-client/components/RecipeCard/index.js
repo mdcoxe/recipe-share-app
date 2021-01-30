@@ -1,25 +1,37 @@
 import * as React from 'react';
 import { View, Text, Image } from 'react-native'
-import { Card, ListItem, Button, Icon } from 'react-native-elements'
+import { Card, Title, Paragraph } from 'react-native-paper';
 import styles from './styles'
 import StyledButton from '../StyledButton';
 
-const RecipeCard = () => {
-  
+const RecipeCard = (props, { navigation }) => {
+    const { title, description, servings, prep, cook, _id} = props.recipeCard;
+
    
     return (
-        <Card style={styles.cardContainer}>
-            <Card.Title style={styles.cardTitle}>HELLO WORLD</Card.Title>
-            <Card.Divider/>
-            <Card.Image style={styles.cardImage} source={require('../../assets/images/silverwareicon.png')}>
-            <Text style={{marginBottom: 10}}>
-                The idea with React Native Elements is more about component structure than actual design.
-            </Text>
-            <Button
-                icon={<Icon name='code' color='#ffffff' />}
-                buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                title='VIEW NOW' />
-            </Card.Image>
+        <Card style={styles.card} key={_id}>
+            <Card.Title
+                title={title}
+                titleStyle={{textTransform: 'capitalize', fontSize: 20}}
+                subtitle={description}
+                subtitleStyle={{fontSize: 14}}
+                subtitleNumberOfLines={3}
+                
+                
+                /> 
+            <Card.Content style={styles.content}>
+                
+                <Paragraph>
+                    Prep time: {prep}
+                </Paragraph>
+                <Paragraph>
+                    Cook Time: {cook}
+                </Paragraph>
+                <Paragraph>
+                    Number of Servings: {servings}
+                </Paragraph>
+            </Card.Content>
+
         </Card>
     )
 }
