@@ -27,8 +27,15 @@
 - ~~Connect to backend~~ - completed Friday morning due to issues
 
 ## Friday
-- Work through issues - backend connection
-- Get styling finished
+- ~~Work through issues - backend connection~~
+- ~~Get styling finished~~
+
+## Saturday
+- Worked on Portfolio
+
+## Sunday
+- Finish portfolio 
+- work on recipe show page
 
 
 # Things left to accomplish
