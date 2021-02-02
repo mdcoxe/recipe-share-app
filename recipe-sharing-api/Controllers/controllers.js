@@ -54,7 +54,7 @@ route.put('/:id',  async (req, res) => {
         const updateRecipe = await Model.findByIdAndUpdate(
             req.params.id,
             req.body,
-            { new: true }
+            // { new: true }
         );
         res.status(200).json(updateRecipe);
     } catch (error) {

@@ -39,12 +39,11 @@ const CreateRecipe = ({ navigation }) => {
                     body
                 })
             const data = await response.json();
-            console.log(data)
             await escapePage();
         } catch (error) {
             console.log(error)
         }
-    }
+    };
     
     return (
         <View style={styles.container}>
@@ -125,7 +124,6 @@ const CreateRecipe = ({ navigation }) => {
                 Save Recipe
             </Button>
         </View>
-     
     )
 }
 const theme = {

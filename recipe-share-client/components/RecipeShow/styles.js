@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
         margin: 0,
         flex:1
     },
+    card: {
+        width: '90%',
+    },
     logo: {
         width: '85%',
     },

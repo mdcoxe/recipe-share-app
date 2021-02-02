@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { useState } from 'react';
 import Home from './components/Home';
 import Login from './components/Login';
 import Feed from './components/Feed';
@@ -15,6 +15,8 @@ const Stack = createStackNavigator();
 
 
 export default function App() {
+
+
   return (
     <NavigationContainer>
       <Stack.Navigator 

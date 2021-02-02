@@ -8,9 +8,7 @@ import { Card, Title, Paragraph } from 'react-native-paper';
 const url = 'http://127.0.0.1:3010/recipe/';
 
 export default function Show({ navigation, route }) {
-    console.log(route);
     const id = route.params.id;
-    console.log(id)
     const [recipe, setRecipe] = useState({})
 
     const fetchRecipe = async () => {
@@ -23,15 +21,46 @@ export default function Show({ navigation, route }) {
         } catch (err) {
             console.log(err)
         }
-    }
+    };
+    
     useEffect(() => {
         fetchRecipe();
-    }, [])
+    }, []);
 
     return (
         <View style={styles.container}>
-            {console.log(recipe)}
-          <Text>{recipe.title}</Text>
+            <Card style={styles.card} >
+                <Card.Title
+                    title={recipe.title}
+                    titleStyle={{textTransform: 'capitalize', fontSize: 20}}
+                    subtitle={recipe.description}
+                    subtitleStyle={{fontSize: 14}}
+                    subtitleNumberOfLines={3}
+                /> 
+                <Card.Content style={styles.content}>
+                    <Paragraph>
+                        Prep time: {recipe.prep}
+                    </Paragraph>
+                    <Paragraph>
+                        Cook Time: {recipe.cook}
+                    </Paragraph>
+                    <Paragraph>
+                        Number of Servings: {recipe.servings}
+                    </Paragraph>
+                    <Paragraph>
+                    </Paragraph>
+                    <StyledButton 
+                        type="xxx"
+                        onPress={() => {navigation.navigate('EditRecipe', { id: recipe._id})}}
+                        content="Edit Recipe"
+                    />
+                    <StyledButton 
+                        type="xxx"
+                        onPress={() => navigation.goBack()}
+                        content="Back to Feed"
+                    />
+                </Card.Content>
+            </Card>       
         </View>
     )
 };
