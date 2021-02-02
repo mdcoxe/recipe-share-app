@@ -6,6 +6,7 @@ import Feed from './components/Feed';
 import Register from './components/Register';
 import CreateRecipe from './components/CreateRecipe';
 import EditRecipe from './components/EditRecipe';
+import Show from './components/RecipeShow';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -46,6 +47,10 @@ export default function App() {
         <Stack.Screen 
           name='EditRecipe' 
           component={EditRecipe} 
+        />
+        <Stack.Screen
+          name='ViewRecipe'
+          component={Show}
         />
       </Stack.Navigator>
     </NavigationContainer>

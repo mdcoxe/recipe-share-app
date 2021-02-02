@@ -12,7 +12,6 @@ const Feed = ({ navigation }) => {
             const response = await fetch ('http://127.0.0.1:3010/recipe');
             const json = await response.json();
             setRecipeCard(json);
-            console.log(json)
         }
         catch (error) {
             console.log(error)
@@ -25,17 +24,21 @@ const Feed = ({ navigation }) => {
     
     return (
         <View style={styles.container}>
-            <Text style ={styles.title}>Scrumptious Recipes</Text>
+            <Text style ={styles.title}>
+                Scrumptious Recipes
+            </Text>
             <FlatList
                 data={recipeCards}
+                key={recipeCards._id}
                 renderItem={({item}) => <RecipeCard recipeCard={item} />}
                 showsVerticalScrollIndicator={false}
                 snapToAlignment={'start'}
                 declerationRate={'fast'}
                 snapToInterval={Dimensions.get('window').height}
+                keyExtractor={(item, index) => index.toString()}
             />
             <StyledButton 
-                type="xxx"
+                type="primary"
                 onPress={() => {navigation.navigate('CreateRecipe')}}
                 content="Create Recipe"
             />
