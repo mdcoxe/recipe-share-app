@@ -50,7 +50,8 @@ route.delete('/:id', async (req, res) => {
 //===============================//
 route.put('/:id',  async (req, res) => {
 // route.put('/:id', auth, async (req, res) => {
-    try {
+console.log(req.body)    
+try {
         const updateRecipe = await Model.findByIdAndUpdate(
             req.params.id,
             req.body,

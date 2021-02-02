@@ -22,8 +22,20 @@ const EditRecipe = ({route, navigation}) => {
 
     const escapePage = () => {
         navigation.navigate('Feed');
-    }
+    };
+
     const fetchRecipe = async () => {
+        const body = JSON.stringify({
+            title: title,
+            description: description,
+            img: img,
+            servings: servings,
+            creator: creator,
+            prep: prep,
+            cook: cook,
+            temp, temp,
+        
+        })
         try {
             const res = await fetch (
                 `${url}${id}`
@@ -39,7 +51,6 @@ const EditRecipe = ({route, navigation}) => {
     }, []);
 
     const submitData = async (event) => {
-        setTitle(recipe.title)
         const body = JSON.stringify({
             title: title,
             description: description,
@@ -67,13 +78,26 @@ const EditRecipe = ({route, navigation}) => {
             console.log(error)
         }
     };
+    const deleteRecipe = async () => {
+        try {
+          const response = await fetch(`${url}${id}`, {
+            method: "DELETE",
+            headers: {
+              "Content-type": "application/json",
+            },
+          });
+          const data = await response.json();
+        } catch (error) {
+          console.log(error);
+        }
+        // props.history.push('/')
+      };
 
     return (
         <View style={styles.container}>
             <TextInput 
                 label='Recipe Name'
                 value={title}
-                placeholder={recipe.title}
                 mode="outlined"
                 theme={theme}
                 onChangeText={text => setTitle(text)}
@@ -121,7 +145,7 @@ const EditRecipe = ({route, navigation}) => {
             <StyledButton 
                 style={styles.button}
                 type='xxx'
-                onPress={() => submitData()}
+                onPress={() => deleteRecipe()}
                 content="Delete Recipe"
             />
         </View>

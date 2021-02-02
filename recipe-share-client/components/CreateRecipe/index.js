@@ -15,7 +15,7 @@ const CreateRecipe = ({ navigation }) => {
     const [directions, setDirections] = useState('')
     
     const escapePage = () => {
-        navigation.navigate('Feed');
+        navigation.goBack();
     }
     const submitData = async (event) => {
         const body = JSON.stringify({

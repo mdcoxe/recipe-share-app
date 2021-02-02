@@ -11,7 +11,6 @@ const recipeSchema = Schema({
     description: { type: String },
     img: { type: String },
     servings: { type: Number },
-    //id of user who created the recipe
     creator: { type: String },
     prep: { type: Number },
     cook: { type: Number },
