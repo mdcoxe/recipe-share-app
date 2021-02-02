@@ -50,7 +50,14 @@ mongoose.connection.once('open', () => {
 //====================================================//
 //++++++++++++++++++++AUTH ROUTES+++++++++++++++++++++//
 //====================================================//
-
+app.get('/users', async (req, res) => {
+    try{
+        const foundUsers = await User.find({});
+        res.status(200).json(foundUsers);
+    } catch (error) {
+        req.status(400).json(error);
+    }
+});
 //===============================//
 //+++++++REGISTER ROUTE++++++++++//
 //===============================//

@@ -15,7 +15,7 @@ const CreateRecipe = ({ navigation }) => {
     const [directions, setDirections] = useState('')
     
     const escapePage = () => {
-        navigation.navigate('Feed');
+        navigation.goBack();
     }
     const submitData = async (event) => {
         const body = JSON.stringify({
@@ -39,12 +39,11 @@ const CreateRecipe = ({ navigation }) => {
                     body
                 })
             const data = await response.json();
-            console.log(data)
             await escapePage();
         } catch (error) {
             console.log(error)
         }
-    }
+    };
     
     return (
         <View style={styles.container}>
@@ -125,7 +124,6 @@ const CreateRecipe = ({ navigation }) => {
                 Save Recipe
             </Button>
         </View>
-     
     )
 }
 const theme = {
