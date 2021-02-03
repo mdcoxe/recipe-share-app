@@ -3,6 +3,13 @@ import { View } from 'react-native';
 import styles from './styles'
 import { Button, TextInput } from 'react-native-paper';
 
+//For ios and web testing
+    // const url = 'http://127.0.0.1:3010/recipe/';
+    // for android testing
+    // const url = 'http://10.0.2.2:3010/recipe/'
+    //live
+    const url = 'https://scrumptious1.herokuapp.com/recipe/'
+    
 const CreateRecipe = ({ navigation }) => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -31,7 +38,7 @@ const CreateRecipe = ({ navigation }) => {
         })
         try {
             const response = await fetch(
-                `http://127.0.0.1:3010/recipe`, {
+                `${url}`, {
                     method: 'POST',
                     headers: {
                         'Content-type': 'application/json'
