@@ -7,7 +7,14 @@ const styles = StyleSheet.create({
     },
     inputStyle: {
         margin: 5,
-    }
+    },
+    image: {
+        alignSelf: 'center',
+        justifyContent: 'center',
+        height: '80%' | 250,
+        width:  '80%',
+        resizeMode: 'center'
+    },
 })
 
 export default styles;

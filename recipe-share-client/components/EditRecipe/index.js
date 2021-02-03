@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import styles from './styles';
 import { Button, TextInput } from 'react-native-paper';
 import StyledButton from '../StyledButton';
@@ -101,6 +101,9 @@ const EditRecipe = ({route, navigation}) => {
 
     return (
         <View style={styles.container}>
+            <View style={styles.logo}>
+                <Image style={styles.image} source={require('../../assets/images/scrumprectlogo.png')} />
+            </View>
             <TextInput 
                 label='Recipe Name'
                 value={title}

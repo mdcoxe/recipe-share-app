@@ -21,6 +21,11 @@ User authentication with JWT is already incorporated on the backend and has succ
     - @react-navigation/native
     - @react-navigation/stack
 
+![](https://imgur.com/ZIA8Mi9.png) ![](https://imgur.com/xs8XS4S.png)
+
+![](https://imgur.com/DA52Zot.png) ![](https://imgur.com/Y7psBOB.png)
+
+
 ## Lessons learned
 Biggest lesson is probably to just focus on one platform, like android.  Documentation was difficult to digest and implement as much was out of date by 2+ years as well as some dependencies do not work well with expo(even if they had in the past).  If I had stuck with a react app and built to be mobile friendly this project would have more than likely completed all the post MVP goals prior to project end date.
 
