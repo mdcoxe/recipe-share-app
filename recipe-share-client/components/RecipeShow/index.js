@@ -6,11 +6,11 @@ import StyledButton from '../StyledButton';
 import { Card, Title, Paragraph } from 'react-native-paper';
 
 //For ios and web testing
-    // const url = 'http://127.0.0.1:3010/recipe/';
+    const url = 'http://127.0.0.1:3010/recipe/';
     // for android testing
     // const url = 'http://10.0.2.2:3010/recipe/'
     //live
-    const url = 'https://scrumptious1.herokuapp.com/recipe/'
+    // const url = 'https://scrumptious1.herokuapp.com/recipe/'
 
 export default function Show({ navigation, route }) {
     const id = route.params.id;

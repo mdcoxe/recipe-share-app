@@ -1,13 +1,37 @@
-# recipe-share-app
+# Scrumptious V1.0
+Scrumptious is my first attempt at building a react native app using expo's cli.  The initial version of the app is to make a crud app using react native.  Currently the app works locally iOS, android and web(Android requires changing the backend source to 10.0.2.2:3010 to connect to the database).  
+
+User authentication with JWT is already incorporated on the backend and has successfully been tested using postman.  It has not been implemented on the frontend yet.
+
+## Technologies used
+- MERN Stack
+    - React & React Native
+    - NodeJS
+    - Express
+    - MongoDB
+- Backend Dependencies
+    - Cors
+    - DotENV
+    - Express 
+    - Mongoose
+    - Nodemon
+    - Authentication with JWT, Bcrypt
+- Frontend Dependencies
+    - react-native-paper
+    - @react-navigation/native
+    - @react-navigation/stack
+
+## Lessons learned
+Biggest lesson is probably to just focus on one platform, like android.  Documentation was difficult to digest and implement as much was out of date by 2+ years as well as some dependencies do not work well with expo(even if they had in the past).  If I had stuck with a react app and built to be mobile friendly this project would have more than likely completed all the post MVP goals prior to project end date.
 
 ## Weekend Updates 23/24 Jan
-- Researched ideas, decided against socket.io
-- Researched best set-up for database(MongoDB vs PostgreSQL)
-- Learned React native basics through code along tutorial(Built tesla app clone)
+- ~~Researched ideas, decided against socket.io~~
+- ~~Researched best set-up for database(MongoDB vs PostgreSQL)~~
+- ~~Learned React native basics through code along tutorial(Built tesla app clone)~~
 
 ## Monday Updates 25 Jan
 - ~~Build backend~~ included authorization/authentication with jwt/bcrypt all routes and models included
-- ~~Built a cheatsheet for future use~~ incloudes some basic templates =>> [Cheatsheet](https://github.com/mdcoxe/dev-notebook/blob/main/Recipe-Sharing-App-Notes.md)
+- ~~Built a cheatsheet for future use~~ incloudes some basic templates =>> [Cheatsheet](https://github.com/mdcoxe/dev-notebook/blob/main/MERRNN-APP_Notes.md)
 
 ## Tuesday Updates 26 Jan
 - ~~Verify models work~~
@@ -20,7 +44,7 @@
 
 ## Wednesday To Do
 - ~~finish building out initial functionality on frontend~~
-- build forms, filler text, logo/icons, make nav bar work
+- ~~build forms, filler text, logo/icons, make nav bar work~~
 
 ## Thursday
 - ~~Finish building recipe create/edit form~~
@@ -28,20 +52,22 @@
 
 ## Friday
 - ~~Work through issues - backend connection~~
-- ~~Get styling finished~~
+- ~~Get styling finished on current pages~~
 
 ## Saturday
 - Worked on Portfolio
 
 ## Sunday
 - Finish portfolio 
-- work on recipe show page
 
 
-# Things left to accomplish
-- Show Page - link to edit page
-- Edit page built but needs routing - add delete button...only accessable via auth
-- Authentication frontend
+## Monday 
+- ~~Worked through routing issues with react-navigation and the show page~~
+- ~~Build in show page, and pass through route to edit page~~
+
+## Tuesday
+- Finish styling
+- Fix feed refresh issue
 
 ## User Stories
 - All users should be able to create multiple recipes, share/edit/delete specific recipes created by said user
@@ -50,17 +76,14 @@
 
 
 ## MVP
-- Deployed
 - Used new tech - React Native
-- Users can register, login, log out
 - Users can create, edit, and delete
 - Finished product styling
 
 
 ## Post MVP
-- Users can sort list of all recipes 
-- Users can favorite/save recipe
-- Users can sort and search feeds
+- Users can register, login, log out using google/facebook auth.
+- Users can search and sort list of all recipes or just their own recipes(created and favorited) 
 - Users can view a private feed of user created recipes and liked recipes
 - Build in photo upload functionality (Upload from album or take photo)
 
