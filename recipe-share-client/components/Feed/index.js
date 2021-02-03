@@ -5,6 +5,13 @@ import styles from './styles';
 import StyledButton from '../StyledButton';
 import RecipeCard from '../RecipeCard';
 
+ //For ios and web testing
+    // const url = 'http://127.0.0.1:3010/recipe/';
+    // for android testing
+    // const url = 'http://10.0.2.2:3010/recipe/'
+    //live
+    const url = 'https://scrumptious1.herokuapp.com/recipe/'
+
 const Feed = ({ navigation }) => {
     const isFocused = useIsFocused();
 
@@ -12,7 +19,7 @@ const Feed = ({ navigation }) => {
 
     const getFeed = async () => {
         try {
-            const response = await fetch ('http://127.0.0.1:3010/recipe');
+            const response = await fetch (`${url}`);
             const json = await response.json();
             setRecipeCard(json);
         }
