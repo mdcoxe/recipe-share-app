@@ -18,7 +18,10 @@ const EditRecipe = ({route, navigation}) => {
 
     
     const id = route.params.id;
-    const url = 'http://127.0.0.1:3010/recipe/';
+    //For ios and web testing
+    // const url = 'http://127.0.0.1:3010/recipe/';
+    // for android testing
+    const url = 'http://10.0.2.2:3010/recipe/'
 
     const escapePage = () => {
         navigation.navigate('Feed');
