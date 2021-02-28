@@ -1,3 +1,18 @@
+# Scrumptious V2.0 --Coming Soon
+Scrumptious is going to be making big changes.  Up coming is a complete rebuild, going to be rebuilt as a MERN app.  
+
+- Stage 1 
+    - Rebuilding the frontend as a react app
+
+- Stage 2
+    - Rebuilding express/node backend with authentication options to include google and facebook
+
+- Stage 3
+    - Add in the option for to add in links to recipes found on the web as well as adding your own recipes...Essentially a bookmark service built in just for recipes to put all the recipes in one spot.
+
+- Potential Stage 4
+    - Build chrome extention that allows the user to add links from web directly through extention eliminating the need to open app to add recipes found online.
+
 # Scrumptious V1.0
 Scrumptious is my first attempt at building a react native app using expo's cli.  The initial version of the app is to make a crud app using react native.  Currently the app works locally iOS, android and web(Android requires changing the backend source to 10.0.2.2:3010 to connect to the database).  
 
