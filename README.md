@@ -1,6 +1,8 @@
 # Scrumptious V2.0 --Coming Soon
 Scrumptious is going to be making big changes.  Up coming is a complete rebuild, going to be rebuilt as a MERN app.  
 
+Link to the new repo...https://github.com/mdcoxe/Scrumptious
+
 - Stage 1 
     - Rebuilding the frontend as a react app
 
